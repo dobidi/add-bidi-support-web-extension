@@ -41,6 +41,8 @@ const callback = function(mutationsList, observer) {
     add_bidi_support();
     last_process_time = Date.now();
   } else {
+    // make sure the last update wouldn't be missed due to quick update
+    setTimeout(callback, update_gap);
     console.log(`Reject add bidi: fast updates in ${since_last_process} ms!`)    
   }
   
