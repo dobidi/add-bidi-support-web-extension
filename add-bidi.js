@@ -28,5 +28,4 @@ observer.observe(targetNode, config);
 
 // Run the main function once
 console.log("initial add_bidi_support run...");
-let last_process_time = Date.now();
 add_bidi_support();
