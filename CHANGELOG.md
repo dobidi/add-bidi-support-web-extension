@@ -1,6 +1,10 @@
 # Changelog
+## [0.2.0] - 2020-05-09
+### Added
+- Support for `input`, `textarea`, `label` and `pre` tags
+
 ## [0.1.1] - 2020-04-28
-## Fixed
+### Fixed
 - fixed running the addon on PWA update
 
 ## [0.1.0] - 2020-04-25
