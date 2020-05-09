@@ -5,7 +5,7 @@ const config = { childList: true, subtree: true };
 
 const add_bidi_support = () => {
   observer.disconnect();
-  const all_elements = document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,a");
+  const all_elements = document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,a,input,textarea,label,pre");
 
   all_elements.forEach(element => {
     element.setAttribute("dir","auto");
