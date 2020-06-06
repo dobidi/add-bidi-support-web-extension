@@ -1,4 +1,8 @@
 # Changelog
+## [0.3.0] - 2020-05-09
+### Added
+- Support for `ul`, `ol` and `li` tags
+
 ## [0.2.0] - 2020-05-09
 ### Added
 - Support for `input`, `textarea`, `label` and `pre` tags
