@@ -19,8 +19,22 @@ const add_bidi_support = () => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const callback = () => {
   console.log("Run add_bidi_support because of DOM update");
+=======
+const main = async () => {
+  const { enabled } = await browser.storage.local.get({ enabled: true });
+  if (!enabled) return;
+  observer = new MutationObserver(() => {
+    console.log("Run add_bidi_support because of DOM update");
+    add_bidi_support();
+  });
+  observer.observe(targetNode, config);
+
+  // Run the main function once
+  console.log("initial add_bidi_support run...");
+>>>>>>> hkalbasi/bidi-support-firefox-extension-master
   add_bidi_support();
 =======
 // Run the main function once
@@ -49,9 +63,4 @@ const callback = function(mutationsList, observer) {
 >>>>>>> reduce update gap time
 };
 
-observer = new MutationObserver(callback);
-observer.observe(targetNode, config);
-
-// Run the main function once
-console.log("initial add_bidi_support run...");
-add_bidi_support();
+main();
