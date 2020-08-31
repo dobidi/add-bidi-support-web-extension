@@ -5,6 +5,18 @@
     "icons": {
         "48": "./assets/icon/bidi-48px.png"
     },
+    "browser_action": {
+        "default_icon": {
+            "48": "./assets/icon/bidi-48px.png"
+        },
+        "default_title": "Add Bidi support"
+    },
+    "background": {        
+        "scripts": ["./background.js"]
+    },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [
         {
             "matches": [
