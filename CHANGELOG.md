@@ -1,4 +1,8 @@
 # Changelog
+## [0.4.0] - 2020-09-01
+### Added
+- Support global enable/disable on toolbar
+
 ## [0.3.0] - 2020-05-09
 ### Added
 - Support for `ul`, `ol` and `li` tags
