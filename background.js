@@ -9,6 +9,5 @@ async function iconClicked() {
   await browser.storage.local.set({ enabled: !enabled });
   statusHandle(!enabled)
 }
-console.log("test");
 
 browser.browserAction.onClicked.addListener(iconClicked);
