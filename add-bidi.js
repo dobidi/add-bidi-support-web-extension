@@ -10,8 +10,8 @@ const add_bidi_support = () => {
   all_elements.forEach(element => {
     element.setAttribute("dir","auto");
 
-    element_style = window.getComputedStyle(element)['text-align'];
-    if (element_style === "left"){
+    textAlignStyle = window.getComputedStyle(element)['text-align'];
+    if (textAlignStyle === "left"){
       element.setAttribute("style", "text-align: start");
     }  
   });
