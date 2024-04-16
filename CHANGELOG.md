@@ -1,4 +1,9 @@
 # Changelog
+
+## [Unreleased]
+### Fixed
+- Improve implementation
+
 ## [0.4.0] - 2020-09-01
 ### Added
 - Support global enable/disable on toolbar
