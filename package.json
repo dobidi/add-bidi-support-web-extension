@@ -1,6 +1,6 @@
 {
   "name": "bidi-support-firefox-extension",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "An extension to manipulate DOM and improve bidirectional text support",
   "main": "add-bidi.js",
   "scripts": {

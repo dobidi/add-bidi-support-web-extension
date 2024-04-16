@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.5.1] - 2024-04-16
 ### Fixed
 - Fix the bug in observing mutations
 
@@ -42,7 +43,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Icon
 - Support for Firefox for Android
 
-[unreleased]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.0...HEAD
+[unreleased]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.1...HEAD
+[0.5.1]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.0...0.5.1
 [0.5.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.4.0...0.5.0
 [0.4.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.3.0...0.4.0
 [0.3.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.2.0...0.3.0
