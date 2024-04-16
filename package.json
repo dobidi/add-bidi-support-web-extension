@@ -1,6 +1,6 @@
 {
   "name": "bidi-support-firefox-extension",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "An extension to manipulate DOM and improve bidirectional text support",
   "main": "add-bidi.js",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/add-bidi-support/bidi-support-firefox-extension.git"
+    "url": "git+https://framagit.org/dobidi/add-bidi-support-web-extension.git"
   },
   "keywords": [
     "bidi",
@@ -23,9 +23,9 @@
   "author": "Mostafa Ahangarha",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://gitlab.com/add-bidi-support/bidi-support-firefox-extension/issues"
+    "url": "https://framagit.org/dobidi/add-bidi-support-web-extension/issues"
   },
-  "homepage": "https://gitlab.com/add-bidi-support/bidi-support-firefox-extension#readme",
+  "homepage": "https://framagit.org/dobidi/add-bidi-support-web-extension#readme",
   "devDependencies": {
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
