@@ -24,5 +24,10 @@
       ],
       "js": ["./add-bidi.js"]
     }
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{c0c82e93-813d-4c40-b609-5c70f599837a}"
+    }
+  }
 }
