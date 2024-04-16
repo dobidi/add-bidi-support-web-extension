@@ -1,28 +1,33 @@
 {
-    "manifest_version": 2,
-    "name": "Add Bidi support",
-    "version": "0.4.0",
-    "icons": {
-        "48": "./assets/icon/bidi-48px.png"
+  "manifest_version": 2,
+  "name": "Add Bidi support",
+  "version": "0.4.0",
+  "icons": {
+    "48": "./assets/icon/bidi-48px.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "./assets/icon/bidi-48px.png"
     },
-    "browser_action": {
-        "default_icon": {
-            "48": "./assets/icon/bidi-48px.png"
-        },
-        "default_title": "Add Bidi support"
-    },
-    "background": {        
-        "scripts": ["./background.js"]
-    },
-    "permissions": [
-        "storage"
-    ],
-    "content_scripts": [
-        {
-            "matches": [
-                "<all_urls>"
-            ],
-            "js": ["./add-bidi.js"]
-        }
-    ]
+    "default_title": "Add Bidi support"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["./add-bidi.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{c0c82e93-813d-4c40-b609-5c70f599837a}"
+    }
+  }
 }

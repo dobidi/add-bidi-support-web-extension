@@ -1,35 +1,62 @@
-let observer = {};
-// Monitor for adding new element in DOM
-const targetNode = document.querySelector('body');
-const config = { childList: true, subtree: true };
+/* global browser */
 
-const add_bidi_support = () => {
-  observer.disconnect();
-  const all_elements = document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,a,input,textarea,label,pre,ul,ol,li");
+const tagsToProcess = new Set([
+  'H1',
+  'H2',
+  'H3',
+  'H4',
+  'H5',
+  'H6',
+  'P',
+  'A',
+  'INPUT',
+  'TEXTAREA',
+  'LABEL',
+  'PRE',
+  'UL',
+  'OL',
+]);
 
-  all_elements.forEach(element => {
-    element.setAttribute("dir","auto");
+const cssSelectorToProcess = Array.from(tagsToProcess)
+  .map((tag) => `${tag.toLowerCase()}:not([dir])`)
+  .join(', ');
 
-    element_style = window.getComputedStyle(element)['text-align'];
-    if (element_style === "left"){
-      element.setAttribute("style", "text-align: start");
-    }  
-  });
-  observer.observe(targetNode, config);
-}
+const addBidiSupport = (element) => {
+  element.setAttribute('dir', 'auto');
+
+  const textAlignStyle = window.getComputedStyle(element)['text-align'];
+  if (textAlignStyle === 'left') {
+    element.setAttribute('style', 'text-align: start');
+  }
+};
+
+const addBidiSupportToExisitingElements = () => {
+  const allElements = document.querySelectorAll(cssSelectorToProcess);
+  allElements.forEach((element) => addBidiSupport(element));
+};
 
 const main = async () => {
   const { enabled } = await browser.storage.local.get({ enabled: true });
   if (!enabled) return;
-  observer = new MutationObserver(() => {
-    console.log("Run add_bidi_support because of DOM update");
-    add_bidi_support();
-  });
-  observer.observe(targetNode, config);
 
-  // Run the main function once
-  console.log("initial add_bidi_support run...");
-  add_bidi_support();
+  addBidiSupportToExisitingElements();
+
+  const observer = new MutationObserver((mutationsList) => {
+    mutationsList.forEach((mutation) => {
+      mutation.addedNodes.forEach((addedNode) => {
+        if (addedNode.nodeType === Node.ELEMENT_NODE) {
+          addedNode.querySelectorAll(cssSelectorToProcess).forEach((element) => {
+            addBidiSupport(element);
+          });
+        }
+      });
+    });
+  });
+
+  observer.observe(
+    document.getElementsByName('body'),
+    { childList: true, subtree: true },
+  );
 };
 
 main();
