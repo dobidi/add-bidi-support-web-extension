@@ -54,7 +54,7 @@ const main = async () => {
   });
 
   observer.observe(
-    document.getElementsByName('body'),
+    document.querySelector('body'),
     { childList: true, subtree: true },
   );
 };
