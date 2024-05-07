@@ -36,8 +36,8 @@ const addBidiSupportToExisitingElements = () => {
 };
 
 const main = async () => {
-  const { enabled } = await browser.storage.local.get({ enabled: true });
-  if (!enabled) return;
+  const { active } = await browser.storage.local.get('active');
+  if (!active) return;
 
   addBidiSupportToExisitingElements();
 

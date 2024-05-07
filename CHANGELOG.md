@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.6.0] - 2024-05-07
+### Fixed
+- Fix active status preservation on session change
+
 ## [0.5.1] - 2024-04-16
 ### Fixed
 - Fix the bug in observing mutations
@@ -43,7 +47,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Icon
 - Support for Firefox for Android
 
-[unreleased]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.1...HEAD
+[unreleased]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.6.0...HEAD
+[0.6.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.1...0.6.0
 [0.5.1]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.5.0...0.5.1
 [0.5.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.4.0...0.5.0
 [0.4.0]: https://framagit.org/dobidi/add-bidi-support-web-extension/-/compare/0.3.0...0.4.0
